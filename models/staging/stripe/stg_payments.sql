@@ -4,4 +4,4 @@ select
     paymentmethod as payment_method,
     status as payment_status,
     amount/100 as amount
-from raw.stripe.payment
+from {{ source('stripe','payment')}}
